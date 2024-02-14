@@ -13,6 +13,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    image: {
+        type: String,
+        default: ''
+    },
     phone: {
         type: String,
         required: true,
@@ -53,7 +57,7 @@ userSchema.set('toJSON', {
 });
 
 exports.User = mongoose.model('User', userSchema);
-exports.userSchema = userSchema;
+
 
 // {   "name": "",
 //     "email": "",

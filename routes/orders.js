@@ -19,7 +19,8 @@ router.get(`/:id`, async (req, res) => {
         .populate({
             path: 'orderItems', 
             populate: {
-                path: 'product', populate: 'category'
+                path: 'product', 
+                populate: 'category'
             }
         });
 
